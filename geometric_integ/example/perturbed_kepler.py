@@ -6,7 +6,6 @@ from geometric_integ.plot_tools import draw_numeric2d, hamiltonian_energy_loss2d
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 def pkepler_test():
     h = 0.03; epoch = 10000; t0 = 0
     y0 = np.array([0, 2, 0.4, 0], dtype = np.float64)
@@ -23,7 +22,6 @@ def pkepler_test():
     manifoldh = ManifoldH()
 
     plt.figure(figsize=(20, 10))
-
     plt.subplot(221)
     res_imp_proj = imp_mid_proj(model_drawm, manifoldh)
     draw_numeric2d(res_imp_proj, color='r', label = 'implict mid point proj')
@@ -41,7 +39,6 @@ def pkepler_test():
     res_imp_proje = imp_mid_proj(model_drawe1, manifoldh)
     res_imp_mide = implicit_midpoint(model_drawe2)
 
-
     plt.subplot(223)
     hamiltonian_energy_loss2d(model_drawe1, res_imp_proje, color='b', label='implict mid proj energy')
     plt.legend()
@@ -51,9 +48,6 @@ def pkepler_test():
     plt.legend()
 
     plt.show()
-
-
-
 
 if __name__ == '__main__':
     pkepler_test()
