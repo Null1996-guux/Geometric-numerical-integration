@@ -1,2 +1,2 @@
 # Geometric-numerical-integration
-fun
+Happy Programming
