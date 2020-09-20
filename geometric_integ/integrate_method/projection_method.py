@@ -19,9 +19,6 @@ def exp_euler_proj(model, manifold, proj_dim = 1):
         model.add_res(y_cur)
     return model.get_res()
 
-# def imp_euler_proj(model, manifold, proj_dim):
-#     pass
-
 def imp_mid_proj(model, manifold, proj_dim = 1):
     y_cur = model.y0
     for i in range(model.epoch):
@@ -31,16 +28,6 @@ def imp_mid_proj(model, manifold, proj_dim = 1):
             y_cur = simple_newton_sca(manifold, y_tilde)
         model.add_res(y_cur)
     return model.get_res()
-
-
-    # y_cur = model.y0
-    # for i in range(model.epoch):
-    #     fc = lambda x: y_cur + model.h * model.f(x) - x
-    #     y_tilde = fsolve(fc, y_cur)
-    #     if proj_dim == 1:
-    #         y_cur = simple_newton_sca(manifold, y_tilde)
-    #     model.add_res(y_cur)
-    # return model.get_res()
 
 def symp_euler_proj(model, manifold, proj_dim = 1):
     tt_l = len(model.y0)
