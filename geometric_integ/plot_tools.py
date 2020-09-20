@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# 方便起见定义等势线绘制函数
+# use this function to draw 2d contour conveniently
 def my_draw_contour2d(func, var1_devid, var2_devid, curve_number = 10, is_ilustrate = True):
     x = np.linspace(var1_devid[0],  var1_devid[1],  var1_devid[2])
     y = np.linspace(var2_devid[0], var2_devid[1],  var2_devid[2])
